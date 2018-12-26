@@ -22,9 +22,7 @@ class App extends Component {
             items: result
           });
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
+        //handle errors
         error => {
           console.log(error);
           this.setState({
@@ -44,12 +42,12 @@ class App extends Component {
     } else {
       return (
         <div className="container">
+          <h1>News</h1>
           <ul>
             {items.map(item => (
-              <News data={item} />
-              // <li key={item.title}>
-              //   {item.content} {item.image}
-              // </li>
+              <li>
+                <News data={item} />
+              </li>
             ))}
           </ul>
         </div>

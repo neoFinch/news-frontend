@@ -1,6 +1,16 @@
 .container {
-  width: 450px;
-  margin: 0 auto;
+  padding: 10px 25px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  padding: 0;
+  list-style: none;
+}
+li {
+  grid-area: 1fr;
 }
 
 .container img {
