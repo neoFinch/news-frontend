@@ -19,19 +19,17 @@ class News extends Component {
           <CardActionArea>
             <CardMedia
               component="img"
-              alt="Contemplative Reptile"
+              alt={this.props.data.title}
               className=""
               height="140"
               image={this.props.data.image}
-              title="Contemplative Reptile"
+              title={this.props.data.title}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 {this.props.data.title}
               </Typography>
-              <Typography component="p">
-                {this.props.data.description}
-              </Typography>
+              <Typography component="p">{this.props.data.content}</Typography>
             </CardContent>
           </CardActionArea>
         </Card>
